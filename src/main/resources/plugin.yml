@@ -1,0 +1,13 @@
+name: SeenAllWhitelist
+main: com.github.fluffycop.seenallwhitelist.SeenAllWhitelist
+version: 1.0.0
+api-version: 1.15
+depend:
+  - Essentials
+commands:
+  seenall:
+    description: Save a list of all whitelisted players' activity to a text file
+
+permissions:
+  seenallwhitelist.seenall:
+    default: op
