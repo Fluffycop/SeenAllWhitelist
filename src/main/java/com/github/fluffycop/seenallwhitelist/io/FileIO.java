@@ -1,5 +1,6 @@
 package com.github.fluffycop.seenallwhitelist.io;
 
+import com.github.fluffycop.seenallwhitelist.QuickSort;
 import com.github.fluffycop.seenallwhitelist.SeenAllWhitelist;
 import com.github.fluffycop.seenallwhitelist.SeenInfo;
 import org.bukkit.Bukkit;
@@ -51,6 +52,7 @@ public class FileIO {
                     info.add(new SeenInfo(p.getLastPlayed(), p));
                 }
             }
+            info = QuickSort.sort(info);
             try {
                 File file = setupFile();
                 BufferedWriter writer = new BufferedWriter(new FileWriter(file));
